@@ -1,0 +1,13 @@
+button {
+    margin: 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+        margin: 10px;
+    }
+}

@@ -1,0 +1,23 @@
+<p-toast position="top-left"></p-toast>
+<button [routerLink]="['resource-availability']" class="btn btn-primary">Back</button>
+
+<form [formGroup]="reservationForm" (submit)="submitReservationForm()">
+    <div class="form-container">
+        <span> Selected timeslot : {{dateValue}}</span>
+        <div class="column">
+            <input type="text" formControlName="firstName" placeholder="First name">
+            <input type="mail" formControlName="mail" placeholder="Email">
+        </div>
+        <div class="column">
+            <input type="text" formControlName="lastName" placeholder="Last name">
+            <input type="text" formControlName="phone" placeholder="Phone">
+        </div>
+        <div>
+            <input type="checkbox" formControlName="acceptTerms">I accept terms and conditions
+        </div> 
+        <div>
+            <input type="checkbox">Save my account
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!isFormValid()">Submit</button>
+    </div>
+</form>
